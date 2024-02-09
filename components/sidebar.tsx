@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils";
-import { DashboardIcon } from "@radix-ui/react-icons";
+import { ChatBubbleIcon, CodeIcon, DashboardIcon, GearIcon, ImageIcon, SpeakerLoudIcon, VideoIcon } from "@radix-ui/react-icons";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +15,48 @@ const routes =[
     {
         label:"Dashboard",
         icon: DashboardIcon,
+        href:"/dashboard",
+        color:"text-teal-400",
+    },
+
+    {
+        label:"Conversation",
+        icon: ChatBubbleIcon,
+        href:"/dashboard",
+        color:"text-teal-400",
+    }, 
+    
+    {
+        label:"Image Generator",
+        icon: ImageIcon,
+        href:"/dashboard",
+        color:"text-teal-400",
+    }, 
+
+    {
+        label:"Video Generator",
+        icon: VideoIcon,
+        href:"/dashboard",
+        color:"text-teal-400",
+    },
+
+    {
+        label:"Music Generator",
+        icon: SpeakerLoudIcon,
+        href:"/dashboard",
+        color:"text-teal-400",
+    },
+
+    {
+        label:"Code Generator",
+        icon: CodeIcon,
+        href:"/dashboard",
+        color:"text-teal-400",
+    },
+
+    {
+        label:"Settings",
+        icon: GearIcon,
         href:"/dashboard",
         color:"text-teal-400",
     },
