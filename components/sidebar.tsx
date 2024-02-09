@@ -1,6 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils";
+import { DashboardIcon } from "@radix-ui/react-icons";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +10,15 @@ const montserrat = Montserrat({
     weight: "600",
     subsets: ["latin"]
 })
+
+const routes =[
+    {
+        label:"Dashboard",
+        icon: DashboardIcon,
+        href:"/dashboard",
+        color:"text-teal-400",
+    },
+]
 
 const Sidebar = () => {
     return ( 
@@ -22,10 +32,24 @@ const Sidebar = () => {
                             src="/Logo.png"
                         />
                     </div>
-                    <h1 className={cn("font-bold text-2xl", montserrat.className)}>
+                    <h1 className={cn("font-bold text-2xl bg-gradient-to-r from-blue-600 via-green-500 to-orange-400 inline-block text-transparent bg-clip-text", montserrat.className)}>
                         IntelliKit 
                     </h1>
                 </Link>
+                <div className="space-y-1">
+                    {routes.map(route =>(
+                        <Link
+                            href={route.href}
+                            key={route.href}
+                            className="text-sm group flex p-3 w-full justify-start font-semibold cursor-pointer duration-200 hover:ease-in hover:text-white hover:bg-white/10 rounded-lg"
+                        >
+                            <div className="flex items-center flex-1">
+                                <route.icon className={cn(" h-5 w-5 mr-3", route.color)} />
+                                {route.label}
+                            </div>
+                        </Link>
+                    ))}
+                </div>
             </div>
         </div>
      );
