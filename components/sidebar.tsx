@@ -15,6 +15,9 @@ const Sidebar = () => {
                             src="/Logo.png"
                         />
                     </div>
+                    <h1 className="font-bold text-2xl">
+                        IntelliKit
+                    </h1>
                 </Link>
             </div>
         </div>
