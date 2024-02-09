@@ -22,42 +22,42 @@ const routes =[
     {
         label:"Conversation",
         icon: ChatBubbleIcon,
-        href:"/dashboard",
+        href:"/conversation",
         color:"text-rose-500",
     }, 
     
     {
         label:"Image Generator",
         icon: ImageIcon,
-        href:"/dashboard",
+        href:"/image",
         color:"text-indigo-400",
     }, 
 
     {
         label:"Video Generator",
         icon: VideoIcon,
-        href:"/dashboard",
+        href:"/video",
         color:"text-orange-500",
     },
 
     {
         label:"Music Generator",
         icon: SpeakerLoudIcon,
-        href:"/dashboard",
+        href:"/music",
         color:"text-lime-400",
     },
 
     {
         label:"Code Generator",
         icon: CodeIcon,
-        href:"/dashboard",
+        href:"/code",
         color:"text-yellow-500",
     },
 
     {
         label:"Settings",
         icon: GearIcon,
-        href:"/dashboard",
+        href:"/settings",
     },
 ]
 
