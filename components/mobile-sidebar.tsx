@@ -2,12 +2,22 @@
 
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import Sidebar from "./sidebar";
 
 const MobileSidebar = () => {
     return (
-        <Button variant="ghost" size="icon" className="md:hidden">
-            <HamburgerMenuIcon />
-        </Button>
+        <Sheet>
+            <SheetTrigger>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                    <HamburgerMenuIcon />
+                </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="p-0">
+                <Sidebar />
+            </SheetContent>
+        </Sheet>
+        
     );
 }
  
