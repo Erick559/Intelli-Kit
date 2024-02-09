@@ -1,5 +1,6 @@
 "use client"
 
+import { cn } from "@/lib/utils";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,8 +22,8 @@ const Sidebar = () => {
                             src="/Logo.png"
                         />
                     </div>
-                    <h1 className="font-bold text-2xl">
-                        IntelliKit
+                    <h1 className={cn("font-bold text-2xl", montserrat.className)}>
+                        IntelliKit 
                     </h1>
                 </Link>
             </div>
