@@ -1,3 +1,5 @@
+"use client"
+
 const DashboardPage = () => {
     return (
       <div>
@@ -10,7 +12,7 @@ const DashboardPage = () => {
           </p>
         </div>
         <div className="px-4 md:px-20 lg:px-32 space-y-4">
-          
+
         </div>
       </div>
         
