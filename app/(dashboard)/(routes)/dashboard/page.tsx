@@ -60,7 +60,7 @@ const DashboardPage = () => {
               className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
             >
               <div className="flex items-center gap-x-4">
-                  <tool.icon className={cn("w-8 h-8", tool.color)} />
+                  <tool.icon className={cn("w-7 h-7", tool.color)} />
                 <div className="font-semibold">
                     {tool.label}
                   </div>
