@@ -23,6 +23,9 @@ const Heading = ({
                     <h2 className="text-2xl font-bold bg-gradient-to-r from-violet-400 via-red-400 to-red-500 inline-block text-transparent bg-clip-text">
                         {title}    
                     </h2>                
+                <p className="text-sm text-mute-foreground">
+                    {description} 
+                </p>               
                 </div>
             </div>
         </>
