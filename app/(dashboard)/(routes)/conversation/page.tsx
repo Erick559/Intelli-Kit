@@ -10,7 +10,6 @@ const ConversationPage = () => {
                 description="Meet our Chat Buddy - your friendly conversation AI."
                 icon={ChatBubbleIcon}
                 iconColor="text-rose-500"
-                bgColor="text-rose-500"
             />
         </div>
     );
