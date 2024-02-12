@@ -4,7 +4,7 @@ import Heading from "@/components/heading";
 import { formSchema } from "./constants";
 
 import * as z from "zod"
-import { ChatBubbleIcon } from "@radix-ui/react-icons";
+import { ChatBubbleIcon, UploadIcon } from "@radix-ui/react-icons";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form,FormControl, FormField, FormItem } from "@/components/ui/form";
