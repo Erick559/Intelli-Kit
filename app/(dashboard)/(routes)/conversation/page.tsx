@@ -1,6 +1,7 @@
 "use client"
 
 import Heading from "@/components/heading";
+import { formSchema } from "./constants";
 
 import * as z from "zod"
 import { ChatBubbleIcon } from "@radix-ui/react-icons";
