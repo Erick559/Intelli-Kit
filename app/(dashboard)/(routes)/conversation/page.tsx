@@ -70,7 +70,7 @@ const ConversationPage = () => {
                                      </FormItem>
                                  )}
                              />
-                             <Button className="col-span-12 lg:col-span-2 bg-gradient-to-r from-violet-500 via-cyan-500 to-lime-400 w-full" disabled={isLoading}>
+                             <Button className="col-span-12 lg:col-span-2 bg-gradient-to-r from-violet-400 via-red-400 to-rose-500 w-full" disabled={isLoading}>
                                 <UploadIcon className="w-5 h-5"/>
                              </Button>
                         </form> 
