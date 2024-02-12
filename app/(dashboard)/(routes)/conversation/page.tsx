@@ -25,7 +25,7 @@ const ConversationPage = () => {
         <div>
             <Heading 
                 title="Conversation"
-                description="Meet our Chat Buddy - your friendly conversation AI."
+                description="Meet your Chat Buddy - your friendly conversation AI."
                 icon={ChatBubbleIcon}
                 iconColor="text-rose-500"
             />
