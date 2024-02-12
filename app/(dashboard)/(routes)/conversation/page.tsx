@@ -3,6 +3,7 @@
 import Heading from "@/components/heading";
 
 import { ChatBubbleIcon } from "@radix-ui/react-icons";
+import { useForm } from "react-hook-form";
 
 const ConversationPage = () => {
     return ( 
