@@ -1,3 +1,5 @@
+"use client"
+
 import Heading from "@/components/heading";
 
 import { ChatBubbleIcon } from "@radix-ui/react-icons";
