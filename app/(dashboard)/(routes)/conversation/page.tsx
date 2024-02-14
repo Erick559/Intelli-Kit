@@ -29,9 +29,22 @@ const ConversationPage = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            
+            const userMessage:ChatCompletionMessageParam={
+                role: "user",
+                content:values.prompt,
+            };
+            const newMessages = [...messages, userMessage];
+
+
+            const response = await axios.post("/api/conversation", {messages:newMessages})
+            setMessages((current)=> [...current, userMessage, response.data]);
+
+            form.reset();
+
         } catch (error:any) {
+            // Open Pro Modal;
             console.log(error);
+
         }finally {
             router.refresh();
         }
