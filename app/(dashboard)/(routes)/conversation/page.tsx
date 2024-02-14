@@ -11,9 +11,12 @@ import { Form,FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 
 const ConversationPage = () => {
     const router = useRouter()
+    const [message, setMessages] = useState<ChatCompletionMessageParam[]>()
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
