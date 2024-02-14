@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
+import Empty from "@/components/empty";
 
 const ConversationPage = () => {
     const router = useRouter()
@@ -103,6 +104,9 @@ const ConversationPage = () => {
                 </div>
                 <div className="space-y-4 mt-4">
                    <div className="flex flex-col-reverse gap-y-4">
+                    {messages.length === 0 && !isLoading &&(
+                        <Empty/>
+                    )}
                     {messages.map((message)=> (
                         <div key={message.content}>
                             {message.content}
