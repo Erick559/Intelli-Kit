@@ -16,7 +16,7 @@ import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 
 const ConversationPage = () => {
     const router = useRouter()
-    const [message, setMessages] = useState<ChatCompletionMessageParam[]>()
+    const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([])
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
