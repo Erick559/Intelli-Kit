@@ -115,7 +115,7 @@ const ConversationPage = () => {
 
                    <div className="flex flex-col-reverse gap-y-4">
                     {messages.length === 0 && !isLoading &&(
-                        <Empty label="Start a conversation..."/>
+                        <Empty label="Ask for debugging help..."/>
                     )}
                     {messages.map((message)=> (
                         <div 
