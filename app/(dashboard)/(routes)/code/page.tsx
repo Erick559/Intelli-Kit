@@ -93,7 +93,7 @@ const ConversationPage = () => {
                                                 focus-visible:ring-transparent
                                                 "
                                                 disabled={isLoading}
-                                                placeholder="What is Avogadro's Law?"
+                                                placeholder="Create a simple interactive button using vanilla JavaScript"
                                                 {...field}
                                             />
                                         </FormControl>
