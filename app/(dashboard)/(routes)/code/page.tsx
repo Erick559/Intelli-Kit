@@ -4,7 +4,7 @@ import axios from "axios";
 import Heading from "@/components/heading";
 import { formSchema } from "./constants";
 import * as z from "zod"
-import { ChatBubbleIcon, UploadIcon } from "@radix-ui/react-icons";
+import {CodeIcon, UploadIcon } from "@radix-ui/react-icons";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form,FormControl, FormField, FormItem } from "@/components/ui/form";
@@ -58,10 +58,10 @@ const ConversationPage = () => {
     return ( 
         <div>
             <Heading 
-                title="Conversation"
-                description="Meet your Chat Buddy - your friendly conversation AI."
-                icon={ChatBubbleIcon}
-                iconColor="text-rose-500"
+                title="Code"
+                description="Debug and create code with this model."
+                icon={CodeIcon}
+                iconColor="text-yellow-500"
             />
             <div className="px-4 lg:px-8">
                 <div>
