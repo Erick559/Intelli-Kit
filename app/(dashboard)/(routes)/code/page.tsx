@@ -19,7 +19,7 @@ import { cn } from "@/lib/utils";
 import UserAvatar from "@/components/user-avatar";
 import BotAvatar from "@/components/bot-avatar";
 
-const ConversationPage = () => {
+const CodePage = () => {
     const router = useRouter()
     const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([])
 
@@ -59,7 +59,7 @@ const ConversationPage = () => {
         <div>
             <Heading 
                 title="Code"
-                description="Debug and create code with this model."
+                description="Debug and create code using generative text."
                 icon={CodeIcon}
                 iconColor="text-yellow-500"
             />
@@ -115,7 +115,7 @@ const ConversationPage = () => {
 
                    <div className="flex flex-col-reverse gap-y-4">
                     {messages.length === 0 && !isLoading &&(
-                        <Empty label="Ask for debugging help..."/>
+                        <EmptyCode label="Ask for debugging help..."/>
                     )}
                     {messages.map((message)=> (
                         <div 
@@ -137,4 +137,4 @@ const ConversationPage = () => {
     );
 }
  
-export default ConversationPage;
+export default CodePage;
