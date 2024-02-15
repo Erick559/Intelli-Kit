@@ -42,7 +42,7 @@ const VideoPage = () => {
             const newMessages = [...messages, userMessage];
 
 
-            const response = await axios.post("/api/code", {messages:newMessages})
+            const response = await axios.post("/api/video", {messages:newMessages})
             setMessages((current)=> [...current, userMessage, response.data]);
 
             form.reset();

@@ -42,7 +42,7 @@ const ImagePage = () => {
             const newMessages = [...messages, userMessage];
 
 
-            const response = await axios.post("/api/code", {messages:newMessages})
+            const response = await axios.post("/api/image", {messages:newMessages})
             setMessages((current)=> [...current, userMessage, response.data]);
 
             form.reset();
