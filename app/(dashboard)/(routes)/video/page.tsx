@@ -116,7 +116,7 @@ const VideoPage = () => {
 
                    <div className="flex flex-col-reverse gap-y-4">
                     {messages.length === 0 && !isLoading &&(
-                        <EmptyVideo label="Ask for debugging help..."/>
+                        <EmptyVideo label="Late on a presentation?"/>
                     )}
                     {messages.map((message)=> (
                         <div 
