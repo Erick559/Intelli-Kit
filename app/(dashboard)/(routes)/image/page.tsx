@@ -12,7 +12,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import EmptyImage from "@/components/empty-image";
 import Loader from "@/components/loader";
 import { cn } from "@/lib/utils";
@@ -22,7 +21,7 @@ import ReactMarkdown from "react-markdown"
 
 const ImagePage = () => {
     const router = useRouter()
-    const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([])
+    const [images, setImages] = useState<string[]>([]);
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -35,15 +34,7 @@ const ImagePage = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            const userMessage:ChatCompletionMessageParam={
-                role: "user",
-                content:values.prompt,
-            };
-            const newMessages = [...messages, userMessage];
-
-
-            const response = await axios.post("/api/image", {messages:newMessages})
-            setMessages((current)=> [...current, userMessage, response.data]);
+            const response = await axios.post("/api/image");
 
             form.reset();
 
@@ -114,36 +105,12 @@ const ImagePage = () => {
                         </div>
                     )}
 
-                   <div className="flex flex-col-reverse gap-y-4">
-                    {messages.length === 0 && !isLoading &&(
+                    {images.length === 0 && !isLoading &&(
                         <EmptyImage label="Create picassoesque images"/>
                     )}
-                    {messages.map((message)=> (
-                        <div 
-                            key={message.content}
-                            className={cn("p-8 w-full flex items-start gap-x-8 rounded-lg",
-                            message.role === 'user' ? "bg:white border border-black/10":'bg-muted'
-                            )}
-                        >
-                            {message.role === 'user' ? <UserAvatar /> : <BotAvatar />}
-                            <ReactMarkdown
-                                components={{
-                                    pre: ({node, ...props}) => (
-                                        <div className="overflow-auto w-full my-2 bg-black/10 p-2 rounded-lg">
-                                            <pre {...props}/>
-                                        </div>
-                                    ),
-                                    code: ({node, ...props}) => (
-                                        <code className="bg-black/10 p-2 rounded-lg" {...props}/>
-                                    )
-                                }}
-                                className="text-sm overflow-hidden leading-7"
-                            >
-                                {message.content || ""}
-                            </ReactMarkdown>
-                        </div>
-                    ))}
-                   </div>
+                    <div>
+                        Images will be rendered here.
+                    </div>
                 </div>
             </div>
         </div>
