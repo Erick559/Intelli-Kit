@@ -104,7 +104,12 @@ const ImagePage = () => {
                                 name="amount"
                                 render={({ field }) => (
                                     <FormItem className="col-span-12 lg:col-span-2">
-                                        <Select>
+                                        <Select
+                                            disabled={isLoading}
+                                            onValueChange={field.onChange}
+                                            value={field.value}
+                                            defaultValue={field.value}
+                                        >
                                             <SelectTrigger className="w-[180px]">
                                                 <SelectValue placeholder="Select Number of Images." />
                                             </SelectTrigger>
