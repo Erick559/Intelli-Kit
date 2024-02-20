@@ -26,7 +26,9 @@ const ImagePage = () => {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            prompt:""
+            prompt:"",
+            amount:"1",
+            resolution:"512*512"
         }
     })
 
