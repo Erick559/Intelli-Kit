@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import Heading from "@/components/heading";
-import { amountOptions, formSchema } from "./constants";
+import { amountOptions, formSchema, resolutionOptions } from "./constants";
 import * as z from "zod"
 import {ImageIcon, UploadIcon } from "@radix-ui/react-icons";
 import { useForm } from "react-hook-form";
@@ -123,6 +123,39 @@ const ImagePage = () => {
                                                     value={amount.value}
                                                 >
                                                     {amount.label}
+                                                </SelectItem>
+                                              ))}
+                                            </SelectContent>
+                                        </Select>
+                                    </FormItem>
+                                )}
+                             />
+
+
+                              <FormField 
+                                control={form.control}
+                                name="resolution"
+                                render={({ field }) => (
+                                    <FormItem className="col-span-12 lg:col-span-2">
+                                        <Select
+                                            disabled={isLoading}
+                                            onValueChange={field.onChange}
+                                            value={field.value}
+                                            defaultValue={field.value}
+                                        >
+                                            <FormControl>
+                                                <SelectTrigger>
+                                                    <SelectValue defaultValue={field.value}/>
+                                                </SelectTrigger>
+                                            </FormControl>
+                                            
+                                            <SelectContent>
+                                              {resolutionOptions.map((option) =>(
+                                                <SelectItem
+                                                    key={option.value}
+                                                    value={option.value}
+                                                >
+                                                    {option.label}
                                                 </SelectItem>
                                               ))}
                                             </SelectContent>
