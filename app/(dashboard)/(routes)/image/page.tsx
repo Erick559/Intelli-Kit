@@ -114,14 +114,14 @@ const ImagePage = () => {
                                                 <SelectValue placeholder="Select Number of Images." />
                                             </SelectTrigger>
                                             <SelectContent>
-                                                <SelectGroup>
-                                                    <SelectLabel>Number of Images:</SelectLabel>
-                                                    <SelectItem value="1">1</SelectItem>
-                                                    <SelectItem value="2">2</SelectItem>
-                                                    <SelectItem value="3">3</SelectItem>
-                                                    <SelectItem value="4">4</SelectItem>
-                                                    <SelectItem value="5">5</SelectItem>
-                                                </SelectGroup>
+                                              {amountOptions.map((amount) =>(
+                                                <SelectItem
+                                                    key={amount.value}
+                                                    value={amount.value}
+                                                >
+                                                    {amount.label}
+                                                </SelectItem>
+                                              ))}
                                             </SelectContent>
                                         </Select>
                                     </FormItem>
