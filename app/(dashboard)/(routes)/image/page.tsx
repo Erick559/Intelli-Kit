@@ -15,9 +15,7 @@ import { useState } from "react";
 import EmptyImage from "@/components/empty-image";
 import Loader from "@/components/loader";
 import { cn } from "@/lib/utils";
-import UserAvatar from "@/components/user-avatar";
-import BotAvatar from "@/components/bot-avatar";
-import ReactMarkdown from "react-markdown"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const ImagePage = () => {
     const router = useRouter()
