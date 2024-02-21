@@ -32,16 +32,11 @@ const MusicPage = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            const userMessage:ChatCompletionMessageParam={
-                role: "user",
-                content:values.prompt,
-            };
-            const newMessages = [...messages, userMessage];
+            setMusic(undefined)
 
-
-            const response = await axios.post("/api/music", {messages:newMessages})
-            setMessages((current)=> [...current, userMessage, response.data]);
-
+            const response = await axios.post("/api/music");
+            
+            setMusic(response.data.audio)
             form.reset();
 
         } catch (error:any) {
@@ -110,7 +105,7 @@ const MusicPage = () => {
                             <Loader />
                         </div>
                     )}
-                     {messages.length === 0 && !isLoading &&(
+                     {!music && !isLoading &&(
                         <EmptyMusic label="Enter a prompt to generate music..."/>
                     )}
                     <div>
