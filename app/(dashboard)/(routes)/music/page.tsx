@@ -34,7 +34,7 @@ const MusicPage = () => {
         try {
             setMusic(undefined)
 
-            const response = await axios.post("/api/music");
+            const response = await axios.post("/api/music",values);
             
             setMusic(response.data.audio)
             form.reset();
@@ -108,9 +108,11 @@ const MusicPage = () => {
                      {!music && !isLoading &&(
                         <EmptyMusic label="Enter a prompt to generate music..."/>
                     )}
-                    <div>
-                        Music
-                    </div>
+                    {music &&(
+                        <audio controls className="w-full mt-8">
+                            <source src={music}/>
+                        </audio>
+                    )}
                 </div>
             </div>
         </div>
