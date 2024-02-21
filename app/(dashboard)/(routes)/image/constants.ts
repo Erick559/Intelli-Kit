@@ -11,39 +11,39 @@ export const formSchema = z.object({
 export const amountOptions= [
     {
         value:"1",
-        label:"1 Photo"
+        label:"1 Photo",
     },
     {
         value:"2",
-        label:"2 Photos"
+        label:"2 Photos",
     },
     {
         value:"3",
-        label:"3 Photos"
+        label:"3 Photos",
     },
     {
         value:"4",
-        label:"4 Photos"
+        label:"4 Photos",
     },
     {
         value:"5",
-        label:"5 Photos"
+        label:"5 Photos",
     }
      
 ]
 
 export const resolutionOptions = [
     {
-        value:"256*256",
-        label:"256*256"
+        value:"256x256",
+        label:"256x256",
     },
     {
-        value:"512*512",
-        label:"512*512"
+        value:"512x512",
+        label:"512x512",
     },
     {
-        value:"1024*1024",
-        label:"1024*1024"
+        value:"1024x1024",
+        label:"1024x1024",
     },
 ]
 
