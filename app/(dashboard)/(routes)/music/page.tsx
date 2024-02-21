@@ -15,14 +15,11 @@ import { useState } from "react";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import EmptyMusic from "@/components/empty-music";
 import Loader from "@/components/loader";
-import { cn } from "@/lib/utils";
-import UserAvatar from "@/components/user-avatar";
-import BotAvatar from "@/components/bot-avatar";
-import ReactMarkdown from "react-markdown"
+
 
 const MusicPage = () => {
     const router = useRouter()
-    const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([])
+    const [music, setMusic] = useState<string>()
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
