@@ -4,7 +4,7 @@ import axios from "axios";
 import Heading from "@/components/heading";
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
 import * as z from "zod"
-import {ImageIcon, UploadIcon } from "@radix-ui/react-icons";
+import {DownloadIcon, ImageIcon, UploadIcon } from "@radix-ui/react-icons";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form,FormControl, FormField, FormItem } from "@/components/ui/form";
@@ -16,6 +16,8 @@ import EmptyImage from "@/components/empty-image";
 import Loader from "@/components/loader";
 import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Card, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
 
 const ImagePage = () => {
     const router = useRouter()
@@ -26,7 +28,7 @@ const ImagePage = () => {
         defaultValues: {
             prompt:"",
             amount:"1",
-            resolution:"512*512"
+            resolution:"512x512"
         }
     })
 
@@ -180,8 +182,31 @@ const ImagePage = () => {
                     {images.length === 0 && !isLoading &&(
                         <EmptyImage label="Create picassoesque images"/>
                     )}
-                    <div>
-                        Images will be rendered here.
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
+                        {images.map((src) => (
+                            <Card
+                                key={src}
+                                className="rounded-lg overflow-hidden"
+                            >
+                                <div className="relative aspect-square">
+                                    <Image 
+                                        alt="Image"
+                                        fill
+                                        src={src}
+                                    />
+                                </div>
+                                <CardFooter className="p-2">
+                                    <Button 
+                                        onClick={() => window.open(src)}
+                                        variant="secondary" 
+                                        className="w-full"
+                                    >
+                                        <DownloadIcon className="h-4 2-4 mr-2" />
+                                        Download
+                                    </Button>
+                                </CardFooter>
+                            </Card>
+                        ))}
                     </div>
                 </div>
             </div>
