@@ -49,7 +49,7 @@ const DashboardPage = () => {
       <div>
         <div className="mb-8 space-y-4">
           <h2 className="text-2xl md:text4xl font-bold text-center bg-gradient-to-r from-blue-600 via-orange-500 to-violet-400 text-transparent bg-clip-text">
-            Welcome to IntelliKit, a Trusted AI Platform.
+            Welcome to Mimir, a Trusted AI Platform.
           </h2>
           <p className="text-muted-foreground font-light text-sm md:text:lg text-center">
             Harness the capabilities of AI with our provided tools.

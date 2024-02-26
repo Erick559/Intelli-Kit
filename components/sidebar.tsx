@@ -76,7 +76,7 @@ const Sidebar = () => {
                         />
                     </div>
                     <h1 className={cn("font-bold text-2xl bg-gradient-to-r from-blue-600 via-green-500 to-orange-400 inline-block text-transparent bg-clip-text", montserrat.className)}>
-                        IntelliKit 
+                        Mimir 
                     </h1>
                 </Link>
                 <div className="space-y-1">
