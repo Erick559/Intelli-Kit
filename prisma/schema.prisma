@@ -16,7 +16,7 @@ datasource db {
 }
         
 
-model UserAPILimit{
+model userAPILimit{
   id String @id @default(cuid())
   userId String @unique
   count Int @default(0)
