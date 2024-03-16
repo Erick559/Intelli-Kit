@@ -86,7 +86,7 @@ const VideoPage = () => {
                                                 focus-visible:ring-transparent
                                                 "
                                                 disabled={isLoading}
-                                                placeholder="Come up with a short video explaining how to reduce carbon emissions"
+                                                placeholder="A video of coral reefs..."
                                                 {...field}
                                             />
                                         </FormControl>
