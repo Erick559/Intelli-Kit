@@ -6,6 +6,7 @@ import { MAX_FREE_COUNTS } from '@/constants';
 import { Progress } from './ui/progress';
 import { Button } from './ui/button';
 import { LightningBoltIcon } from '@radix-ui/react-icons';
+import { useProModal } from '@/hooks/use-pro-modal';
 
 interface FreeCounterProps {
     apiLimitCount: number;
@@ -15,6 +16,7 @@ const FreeCounter = ({
     apiLimitCount = 0
 }: FreeCounterProps) => {
     const [mounted, setMounted] = useState(false);
+    const proModal = useProModal();
     
     useEffect(() => {
         setMounted(true);
@@ -37,7 +39,7 @@ const FreeCounter = ({
                             value={(apiLimitCount / MAX_FREE_COUNTS) * 100}
                         />
                     </div>
-                    <Button className='w-full' variant={'premium'}>
+                    <Button onClick={proModal.onOpen} className='w-full' variant={'premium'}>
                         Upgrade
                         <LightningBoltIcon className='w-4 h-4 ml-2' />
                     </Button>
