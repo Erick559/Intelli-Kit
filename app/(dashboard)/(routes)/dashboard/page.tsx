@@ -2,46 +2,12 @@
 
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
+import tool from "@/tools"
+import { ArrowRightIcon } from "@radix-ui/react-icons"
 
-import { ArrowRightIcon, ChatBubbleIcon, CodeIcon, ImageIcon, SpeakerLoudIcon, VideoIcon } from "@radix-ui/react-icons"
 import { useRouter } from "next/navigation"
 
-const tools= [
-  {
-    label:"Conversation",
-    icon: ChatBubbleIcon,
-    color:"text-rose-500",
-    href:"/conversation"
-  },
-
-  {
-    label:"Image Generator",
-    icon: ImageIcon,
-    color:"text-indigo-400",
-    href:"/conversation"
-  },
-
-  {
-    label:"Video Generator",
-    icon: VideoIcon,
-    color:"text-orange-500",
-    href:"/conversation"
-  },
-
-  {
-    label:"Music Generator",
-    icon: SpeakerLoudIcon,
-    color:"text-lime-400",
-    href:"/conversation"
-  },
-
-  {
-    label:"Code Generator",
-    icon: CodeIcon,
-    color:"text-yellow-500",
-    href:"/conversation"
-  }
-]
+const tools = tool
 
 const DashboardPage = () => {
   const router = useRouter()
