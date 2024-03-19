@@ -3,6 +3,7 @@ import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
 import { increaseAPILimit, checkApLimit } from "@/lib/api_limits";
+import { checkSubscription } from "@/lib/subscription_check";
 
 
 const replicate = new Replicate({
@@ -26,8 +27,9 @@ export async function POST(
       }
 
       const freeTrial = await checkApLimit();
+      const isPro = await checkSubscription();
 
-      if(!freeTrial){
+      if(!freeTrial && !isPro){
           return new NextResponse('Free trial expired', {status:403});
       }
   
@@ -40,7 +42,9 @@ export async function POST(
         }
       );
 
-      await increaseAPILimit()
+      if(!isPro){
+        await increaseAPILimit()
+      }
   
       return NextResponse.json(response);
     } catch (error) {
