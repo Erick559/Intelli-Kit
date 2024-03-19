@@ -60,7 +60,7 @@ export const ProModal = () => {
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>
-                    <Button onClick={onSubscribe} size={"lg"} className='w-full' variant={'premium'}>
+                    <Button disabled={loading} onClick={onSubscribe} size={"lg"} className='w-full' variant={'premium'}>
                             Upgrade
                             <LightningBoltIcon className='w-4 h-4 ml-2' />
                     </Button>
