@@ -51,6 +51,8 @@ const ConversationPage = () => {
         } catch (error:any) {
             if(error?.response?.status === 403){
                 proModal.onOpen();
+            }else{
+                toast.erro('Something went wrong');
             }
         }finally {
             router.refresh();
