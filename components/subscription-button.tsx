@@ -4,6 +4,7 @@ import { LightningBoltIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import axios from "axios";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 interface SubscritpionButtonProps {
     isPro : boolean;
@@ -19,7 +20,7 @@ const SubscriptionButton = ({isPro = false}: SubscritpionButtonProps) => {
 
       window.location.href = response.data.url;
     } catch (error) {
-      console.log("BILLING ERROR", error)
+      toast.error('Something went wrong');
     }finally{
       setLoading(false);
     }
