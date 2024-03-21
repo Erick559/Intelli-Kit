@@ -11,6 +11,7 @@ import SecondaryButton from "./ui/secondary-button"
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
 import MenuSvg from "./ui/MenuSvg";
+import {enablePageScroll, disablePageScroll} from "scroll-lock";
 
 const NavigationBar = () => {
     const { isSignedIn} = useAuth();
@@ -19,13 +20,18 @@ const NavigationBar = () => {
     const toggleNavigation = () => {
         if (openNavigation) {
             setOpenNavigation(false)
+            enablePageScroll();
         }
         else{
             setOpenNavigation(true);
+            disablePageScroll();
         }
     }
 
     const handleClick = () => {
+        if(!openNavigation) return;
+
+        enablePageScroll();
         setOpenNavigation(false);
     }
 
