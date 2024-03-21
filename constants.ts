@@ -11,6 +11,18 @@ export const navigation = [
         title:'Pricing',
         href:'#pricing',
     },
+    {
+      id: "4",
+      title: "New account",
+      href: "#signup",
+      onlyMobile: true,
+    },
+    {
+      id: "5",
+      title: "Sign in",
+      href: "#login",
+      onlyMobile: true,
+    },
 ]
 
 export const pricing = [
