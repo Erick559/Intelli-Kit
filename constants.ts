@@ -1,5 +1,6 @@
 export const MAX_FREE_COUNTS = 10;
 
+
 export const navigation = [
     {
         id:0,
@@ -12,15 +13,15 @@ export const navigation = [
         href:'#pricing',
     },
     {
-      id: "4",
-      title: "New account",
-      href: "#signup",
+      id: 2,
+      title: "try for free",
+      href: "/dashboard",
       onlyMobile: true,
     },
     {
-      id: "5",
+      id: 3,
       title: "Sign in",
-      href: "#login",
+      href:'/dashboard',
       onlyMobile: true,
     },
 ]
