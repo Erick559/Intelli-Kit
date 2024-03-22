@@ -1,7 +1,7 @@
 "use client"
 
 import axios from "axios";
-import Heading from "@/components/heading";
+import Heading from "@/components/dashboard/heading";
 import { formSchema } from "./constants";
 import * as z from "zod"
 import {SpeakerLoudIcon, UploadIcon } from "@radix-ui/react-icons";
@@ -13,8 +13,8 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
-import EmptyMusic from "@/components/empty-music";
-import Loader from "@/components/loader";
+import EmptyMusic from "@/components/dashboard/empty-music";
+import Loader from "@/components/dashboard/loader";
 import { useProModal } from "@/hooks/use-pro-modal";
 import toast from "react-hot-toast";
 

@@ -1,8 +1,8 @@
 "use client"
 
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Button } from "../ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import Sidebar from "./sidebar";
 import { useState, useEffect } from "react";
 

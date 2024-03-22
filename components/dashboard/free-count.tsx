@@ -1,10 +1,10 @@
 "use client"
 
 import {useState, useEffect} from 'react'
-import { Card, CardContent } from './ui/card';
+import { Card, CardContent } from '../ui/card';
 import { MAX_FREE_COUNTS } from '@/constants';
-import { Progress } from './ui/progress';
-import { Button } from './ui/button';
+import { Progress } from '../ui/progress';
+import { Button } from '../ui/button';
 import { LightningBoltIcon } from '@radix-ui/react-icons';
 import { useProModal } from '@/hooks/use-pro-modal';
 

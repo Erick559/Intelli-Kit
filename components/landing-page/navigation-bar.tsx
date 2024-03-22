@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useAuth} from "@clerk/nextjs";
-import { Button} from "./ui/button";
+import { Button} from "../ui/button";
 import { navigation } from "@/constants";
-import SecondaryButton from "./ui/secondary-button"
-import { HamburgerMenu } from "./design/Header";
+import SecondaryButton from "../ui/secondary-button"
+import { HamburgerMenu } from "../design/Header";
 import { useEffect, useState } from "react";
-import MenuSvg from "./ui/MenuSvg";
+import MenuSvg from "../ui/MenuSvg";
 import {enablePageScroll, disablePageScroll} from "scroll-lock";
 
 

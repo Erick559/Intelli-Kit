@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Section } from "./section";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
-import SecondaryButton from "./ui/secondary-button";
+import SecondaryButton from "../ui/secondary-button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { BackgroundCircles, BottomLine, Gradient } from "../design/Hero";
 import { heroIcons } from "@/constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";

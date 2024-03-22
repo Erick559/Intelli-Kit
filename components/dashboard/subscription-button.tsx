@@ -1,7 +1,7 @@
 "use client"
 
 import { LightningBoltIcon } from "@radix-ui/react-icons";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";

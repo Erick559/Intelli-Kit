@@ -1,7 +1,7 @@
 'use client'
 
-import Hero from "@/components/hero";
-import NavigationBar from "@/components/navigation-bar";
+import Hero from "@/components/landing-page/hero";
+import NavigationBar from "@/components/landing-page/navigation-bar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

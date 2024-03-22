@@ -1,7 +1,7 @@
 "use client"
 
 import axios from "axios";
-import Heading from "@/components/heading";
+import Heading from "@/components/dashboard/heading";
 import { formSchema } from "./constants";
 import * as z from "zod"
 import {CodeIcon, UploadIcon } from "@radix-ui/react-icons";
@@ -13,11 +13,11 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
-import EmptyCode from "@/components/empty-code";
-import Loader from "@/components/loader";
+import EmptyCode from "@/components/dashboard/empty-code";
+import Loader from "@/components/dashboard/loader";
 import { cn } from "@/lib/utils";
-import UserAvatar from "@/components/user-avatar";
-import BotAvatar from "@/components/bot-avatar";
+import UserAvatar from "@/components/dashboard/user-avatar";
+import BotAvatar from "@/components/dashboard/bot-avatar";
 import ReactMarkdown from "react-markdown"
 import { useProModal } from "@/hooks/use-pro-modal";
 

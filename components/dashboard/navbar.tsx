@@ -1,5 +1,5 @@
 import { DropdownMenuIcon, HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { UserButton } from "@clerk/nextjs";
 import MobileSidebar from "./mobile-sidebar";
 import { getApiLimitCount } from "@/lib/api_limits";

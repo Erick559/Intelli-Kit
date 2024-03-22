@@ -1,7 +1,7 @@
 "use client"
 
 import axios from "axios";
-import Heading from "@/components/heading";
+import Heading from "@/components/dashboard/heading";
 import { formSchema } from "./constants";
 import * as z from "zod"
 import {UploadIcon, VideoIcon} from "@radix-ui/react-icons";
@@ -13,8 +13,8 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import EmptyVideo from "@/components/empty-video";
-import Loader from "@/components/loader";
+import EmptyVideo from "@/components/dashboard/empty-video";
+import Loader from "@/components/dashboard/loader";
 import { cn } from "@/lib/utils";
 import { useProModal } from "@/hooks/use-pro-modal";
 import toast from "react-hot-toast";

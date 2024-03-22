@@ -1,4 +1,4 @@
-import SectionSvg from "./design/SectionSvg";
+import SectionSvg from "../design/SectionSvg";
 
 export function Section({
   className,

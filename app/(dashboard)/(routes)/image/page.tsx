@@ -1,7 +1,7 @@
 "use client"
 
 import axios from "axios";
-import Heading from "@/components/heading";
+import Heading from "@/components/dashboard/heading";
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
 import * as z from "zod"
 import {DownloadIcon, ImageIcon, UploadIcon } from "@radix-ui/react-icons";
@@ -12,8 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import EmptyImage from "@/components/empty-image";
-import Loader from "@/components/loader";
+import EmptyImage from "@/components/dashboard/empty-image";
+import Loader from "@/components/dashboard/loader";
 import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardFooter } from "@/components/ui/card";

@@ -28,6 +28,8 @@ export const navigation = [
 
 export const heroIcons = ['/chat.svg', '/code.svg', '/camera.svg', '/video.svg','/speaker.svg'];
 
+export const notificationImages = ['/image-1.png', '/image-2.png', '/image-3.png', '/image-4.png',]
+
 export const pricing = [
     {
       id: "0",
