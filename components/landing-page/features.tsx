@@ -10,6 +10,8 @@ const Features = () => {
     <Section
         className='font-grotesk' 
         id="features"
+        crosses
+        crossesOffset='lg:translate-y-[5.25rem]'
     >
         <div className="relative max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem] z-2">
             <Heading className='font-semibold max-w-lg md:max-w-md lg:max-w-2xl' title='Mimir: Your AI Co-Pilot for Effortless Creation'/>
