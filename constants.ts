@@ -26,6 +26,8 @@ export const navigation = [
     },
 ]
 
+export const heroIcons = ['/chat.svg', '/code.svg', '/camera.svg', '/video.svg','/speaker.svg'];
+
 export const pricing = [
     {
       id: "0",
