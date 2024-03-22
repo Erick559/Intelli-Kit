@@ -3,8 +3,10 @@
 import Features from "@/components/landing-page/features";
 import Hero from "@/components/landing-page/hero";
 import NavigationBar from "@/components/landing-page/navigation-bar";
+import Pricing from "@/components/landing-page/pricing";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import {BrowserRouter as Router} from 'react-router-dom';
 
 const LandingPage = () => {
     return (  
@@ -13,6 +15,7 @@ const LandingPage = () => {
                 <NavigationBar />
                 <Hero />
                 <Features />
+                <Pricing />
             </div>
         </>
     );
