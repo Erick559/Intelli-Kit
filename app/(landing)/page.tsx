@@ -1,6 +1,6 @@
 'use client'
 
-import Benefits from "@/components/landing-page/benefits";
+import Features from "@/components/landing-page/features";
 import Hero from "@/components/landing-page/hero";
 import NavigationBar from "@/components/landing-page/navigation-bar";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,7 @@ const LandingPage = () => {
             <div className="pt-[4.75rem] lg:-[5.25rem] overflow-hidden bg-n-8 text-white">
                 <NavigationBar />
                 <Hero />
-                <Benefits />
+                <Features />
             </div>
         </>
     );
