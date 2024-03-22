@@ -62,7 +62,7 @@ const NavigationBar = () => {
                        {navigation.map((item) => {
                             return(
                                 <Link 
-                                    className={`block relative font-code text-xl uppercase transition-colors hover:text-color-1 hover:underline ${item.onlyMobile ? 'lg:hidden': ''} ${item.href == clickedLink? 'text-color-1': ''} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 xl:px-10`}
+                                    className={`block relative font-code text-xl uppercase transition-colors hover:text-color-1 hover:underline ${item.onlyMobile ? 'lg:hidden': ''} ${item.href == clickedLink? 'text-color-1': 'text-slate-50'} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 xl:px-10`}
                                     key={item.id}
                                     href = {item.href}
                                     onClick={() => mainClickFunction(item.href)}
