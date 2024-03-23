@@ -1,6 +1,7 @@
 'use client'
 
 import Features from "@/components/landing-page/features";
+import Footer from "@/components/landing-page/footer";
 import Hero from "@/components/landing-page/hero";
 import NavigationBar from "@/components/landing-page/navigation-bar";
 import Pricing from "@/components/landing-page/pricing";
@@ -16,6 +17,7 @@ const LandingPage = () => {
                 <Hero />
                 <Features />
                 <Pricing />
+                <Footer />
             </div>
         </>
     );
