@@ -1,7 +1,7 @@
 import {create} from 'zustand';
 
 interface useProModalStore{
-    isOpen:false,
+    isOpen:boolean,
     onOpen: () =>  void,
     onClose:() => void,
 };
