@@ -31,40 +31,43 @@ export const heroIcons = ['/chat.svg', '/code.svg', '/camera.svg', '/video.svg',
 export const notificationImages = ['/user-1.png', '/user-2.png', '/user-3.png', '/user-4.png',]
 
 export const pricing = [
-    {
-      id: "0",
-      title: "Basic",
-      description: "AI chatbot, personalized recommendations",
-      price: "0",
-      features: [
-        "An AI chatbot that can understand your queries",
-        "Personalized recommendations based on your preferences",
-        "Ability to explore the app and its features without any cost",
-      ],
-    },
-    {
-      id: "1",
-      title: "Premium",
-      description: "Advanced AI chatbot, priority support, analytics dashboard",
-      price: "9.99",
-      features: [
-        "An advanced AI chatbot that can understand complex queries",
-        "An analytics dashboard to track your conversations",
-        "Priority support to solve issues quickly",
-      ],
-    },
-    {
-      id: "2",
-      title: "Enterprise",
-      description: "Custom AI chatbot, advanced analytics, dedicated account",
-      price: null,
-      features: [
-        "An AI chatbot that can understand your queries",
-        "Personalized recommendations based on your preferences",
-        "Ability to explore the app and its features without any cost",
-      ],
-    },
-  ]
+  {
+    id: "0",
+    title: "Free",
+    description: "Try Mimir's core features. 10 free generations total.",
+    price: "0",
+    features: [
+      "Explore Creative Possibilities: Generate text formats, visuals, and code snippets.",
+      "Unlock Basic Functionality: Get a taste of Mimir's core capabilities.",
+      "Limited Generations: Try out features with 10 free uses.",
+    ],
+    textColor: 'text-teal-400',
+  },
+  {
+    id: "1",
+    title: "Premium",
+    description: "Unlock unlimited creativity. Generate anything you imagine.",
+    price: "9.99",
+    features: [
+      "Unlimited Creative Power: Generate text, code, visuals, and more - all unlimited.",
+      "Advanced Features & Customization: Fine-tune your creations and unlock deeper control.",
+      "Priority Support: Get expert assistance to maximize your creative potential.",
+    ],
+    textColor: 'animate-gradient-x bg-gradient-to-r from-violet-400 via-red-400 to-red-500 text-transparent bg-clip-text',
+  },
+
+  {
+    id: "2",
+    title: "Enterprise",
+    description: "Custom AI solutions tailored to your needs.",
+    features: [
+      "Custom AI Development: Build AI solutions specifically for your business needs.",
+      "Seamless Integration: Integrate Mimir seamlessly into your existing workflows.",
+      "Dedicated Account Management: Get personalized support and guidance from a dedicated team.",
+    ],
+    textColor: 'text-pink-500',
+  },
+];
 
   export const benefits = [
     {
