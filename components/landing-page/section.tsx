@@ -1,5 +1,14 @@
 import SectionSvg from "../design/SectionSvg";
 
+interface SectionProps {
+  className?: string;
+  id?: string; 
+  crosses?: boolean; 
+  crossesOffset?: string; 
+  children: React.ReactNode; 
+  customPaddings?: string; 
+}
+
 export function Section({
   className,
   id,
@@ -7,7 +16,7 @@ export function Section({
   crossesOffset,
   children,
   customPaddings,
-}) {
+}:SectionProps) {
   return (
       <div 
           id={id} 
