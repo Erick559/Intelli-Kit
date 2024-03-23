@@ -18,8 +18,8 @@ export const checkSubscription = async () => {
         select:{
             stripeSubscriptionId:true,
             stripeCustomerId:true,
-            StripeCurrentPeriodEnd:true,
-            StripePriceId:true,
+            stripeCurrentPeriodEnd:true,
+            stripePriceId:true,
         }
     })
 
@@ -28,7 +28,7 @@ export const checkSubscription = async () => {
     }
 
     const isValid = 
-        userSubscription.StripePriceId && userSubscription.StripeCurrentPeriodEnd?.getTime()! + DAYS_IN_MS > Date.now();
+        userSubscription.stripePriceId && userSubscription.stripeCurrentPeriodEnd?.getTime()! + DAYS_IN_MS > Date.now();
 
         return !!isValid;
 }
