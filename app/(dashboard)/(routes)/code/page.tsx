@@ -61,6 +61,8 @@ const CodePage = () => {
         }
     }
 
+    
+
     return ( 
         <div>
             <Heading 
@@ -125,7 +127,7 @@ const CodePage = () => {
                     )}
                     {messages.map((message)=> (
                         <div 
-                            key={message.content}
+                            key={message.content as string}
                             className={cn("p-8 w-full flex items-start gap-x-8 rounded-lg",
                             message.role === 'user' ? "bg:white border border-black/10":'bg-muted'
                             )}
@@ -144,7 +146,7 @@ const CodePage = () => {
                                 }}
                                 className="text-sm overflow-hidden leading-7"
                             >
-                                {message.content || ""}
+                                {message.content as string || ""}
                             </ReactMarkdown>
                         </div>
                     ))}
