@@ -46,7 +46,7 @@ export async function GET() {
                     name:'Mimir Pro',
                     description:"Mimir Pro for unlimited AI generations.",
                 },
-                unit_amount:"1000",
+                unit_amount:1000,
                 recurring:{
                     interval:"month",
                 }
