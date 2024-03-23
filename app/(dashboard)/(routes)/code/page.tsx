@@ -20,6 +20,7 @@ import UserAvatar from "@/components/dashboard/user-avatar";
 import BotAvatar from "@/components/dashboard/bot-avatar";
 import ReactMarkdown from "react-markdown"
 import { useProModal } from "@/hooks/use-pro-modal";
+import toast from "react-hot-toast";
 
 const CodePage = () => {
     const router = useRouter()
