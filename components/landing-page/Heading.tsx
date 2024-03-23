@@ -1,6 +1,12 @@
 import Tagline from "./Tagline"
 
-const Heading = ({className,title,tag}) => {
+interface HeadingProps {
+  className? : string,
+  title:string,
+  tag?:string,
+}
+
+const Heading = ({className,title,tag}:HeadingProps) => {
   return (
     <div
         className={`${className} max-w-[50rem] mx-auto mb-12 lg:mb-20`}
