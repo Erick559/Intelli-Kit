@@ -6,7 +6,7 @@ interface SectionProps {
   crosses?: boolean; 
   crossesOffset?: string; 
   children: React.ReactNode; 
-  customPaddings?: string; 
+  customPaddings?: boolean; 
 }
 
 export function Section({
