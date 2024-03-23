@@ -12,7 +12,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 const LandingPage = () => {
     return (  
         <>
-            <div className="pt-[4.75rem] lg:-[5.25rem] overflow-hidden bg-n-8 text-white !scroll-smooth">
+            <div className="pt-[4.75rem] lg:-[5.25rem] overflow-hidden bg-n-8 text-white">
                 <NavigationBar />
                 <Hero />
                 <Features />
