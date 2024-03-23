@@ -11,7 +11,7 @@ const Loader = () => {
                 />
             </div>
             <p className="text-sm text-muted-foreground">
-                Crafting intelligence, please await a moment..."
+                Crafting intelligence, please await a moment...
             </p>
         </div>
     );
